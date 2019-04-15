@@ -1,0 +1,37 @@
+{
+	"name": "angularjs-starter",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"test": "echo 'Hello World'",
+		"build": "webpack --mode production",
+		"dev": "webpack-dev-server --mode development"
+	},
+	"keywords": [],
+	"author": "@danilobrinu",
+	"devDependencies": {
+		"@babel/core": "^7.4.3",
+		"@babel/plugin-proposal-class-properties": "^7.2.1",
+		"@babel/preset-env": "^7.4.3",
+		"babel-loader": "^8.0.5",
+		"clean-webpack-plugin": "^1.0.0",
+		"css-loader": "^2.1.1",
+		"extract-loader": "^3.1.0",
+		"file-loader": "^3.0.1",
+		"html-loader": "^0.5.5",
+		"html-webpack-plugin": "^3.2.0",
+		"pug": "^2.0.3",
+		"pug-html-loader": "^1.1.5",
+		"pug-loader": "^2.4.0",
+		"sass-loader": "^7.1.0",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.30.0",
+		"webpack-cli": "^3.3.0",
+		"webpack-dev-server": "^3.3.1"
+	},
+	"dependencies": {
+		"angular": "^1.7.8",
+		"lodash": "^4.17.11",
+		"oclazyload": "^1.1.0"
+	}
+}
