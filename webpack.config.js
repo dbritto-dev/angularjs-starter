@@ -38,13 +38,13 @@ module.exports = (_, { mode = 'development' }) => ({
 			{
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.pug$/,
-        include: /(index)\.pug$/,
-        use: 'pug-loader'
-      },
-      {
+			},
+			{
+				test: /\.pug$/,
+				include: /(index)\.pug$/,
+				use: 'pug-loader',
+			},
+			{
 				test: /\.pug$/,
 				exclude: /(index|404)\.pug$/,
 				use: [
@@ -65,17 +65,21 @@ module.exports = (_, { mode = 'development' }) => ({
 	resolve: {
 		modules: ['node_modules'],
 		extensions: ['.js', '.scss', '.pug'],
+		alias: {
+			'@app': path.resolve(__dirname, 'src/app'),
+			'@components': path.resolve(__dirname, 'src/components'),
+		},
 	},
 
 	optimization: {
 		splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
 			cacheGroups: {
 				vendors: {
 					test: /[\\/]node_modules[\\/]/,
 					name: 'vendor',
-					priority: -10,
-					enforce: true,
-					chunks: 'all',
 				},
 			},
 		},
