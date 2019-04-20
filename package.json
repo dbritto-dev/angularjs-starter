@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"test": "echo 'Hello World'",
 		"build": "webpack --mode production",
 		"dev": "webpack-dev-server --mode development"
 	},
@@ -11,7 +10,8 @@
 	"author": "@danilobrinu",
 	"devDependencies": {
 		"@babel/core": "^7.4.3",
-		"@babel/plugin-proposal-class-properties": "^7.2.1",
+		"@babel/plugin-proposal-class-properties": "^7.4.0",
+		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
 		"@babel/preset-env": "^7.4.3",
 		"babel-loader": "^8.0.5",
 		"clean-webpack-plugin": "^1.0.0",
@@ -30,6 +30,7 @@
 		"webpack-dev-server": "^3.3.1"
 	},
 	"dependencies": {
+		"@uirouter/angularjs": "^1.0.22",
 		"angular": "^1.7.8",
 		"lodash": "^4.17.11",
 		"oclazyload": "^1.1.0"
