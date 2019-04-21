@@ -19,15 +19,6 @@ export const AppRoutingModule = angular
 					);
 				},
 			});
-			$stateProvider.state('notfound', {
-				url: '/404',
-				component: 'notFoundPage',
-				lazyLoad: (transition) => {
-					const $ocLazyLoad = transition.injector().get('$ocLazyLoad');
-					return import('@components/pages/not-found-page/not-found-page.module').then(
-						(mod) => $ocLazyLoad.inject(mod.NotFoundPageModule)
-					);
-				},
-			});
 		},
-	]).name;
+  ])
+  .name;
