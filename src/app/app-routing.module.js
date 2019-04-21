@@ -3,7 +3,11 @@ import ocLazyLoad from 'oclazyload';
 import uiRouter from '@uirouter/angularjs';
 
 export const AppRoutingModule = angular
-	.module('app.routing', [uiRouter, ocLazyLoad])
+  .module('app.routing', [uiRouter, ocLazyLoad])
+  .config(['$interpolateProvider', ($interpolateProvider) => {
+    $interpolateProvider.startSymbol('<%');
+    $interpolateProvider.endSymbol('%>');
+  }])
 	.config([
 		'$stateProvider',
 		'$urlServiceProvider',
