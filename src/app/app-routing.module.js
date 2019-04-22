@@ -42,7 +42,8 @@ export const AppRoutingModule = angular
 				},
       ];
 
-			_map(states, (state) => $stateProvider.state(state));
+      _map(states, (state) => $stateProvider.state(state));
+
 			$urlServiceProvider.rules.when('', '/');
 			$urlServiceProvider.rules.otherwise('/error/404');
 			$locationProvider.html5Mode(true);
