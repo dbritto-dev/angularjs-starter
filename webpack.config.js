@@ -51,7 +51,7 @@ module.exports = (_, { mode = 'development' }) => ({
 					{
 						loader: 'file-loader',
 						options: {
-							name: '[name]-[hash].html',
+							name: '[name].[hash].html',
 						},
 					},
 					'extract-loader',
