@@ -8,7 +8,7 @@ class ErrorPageController {
     this.__INITIAL__STATE__ = __INITIAL__STATE__;
   }
 
-	$onInit() {
+  $onInit() {
     const { type } = this.$stateParams;
 
     this.type = type;
@@ -18,7 +18,7 @@ class ErrorPageController {
 }
 
 export const ErrorPageComponent = {
-	bindings: {},
-	templateUrl: ErrorPageTemplate,
-	controller: ErrorPageController,
+  bindings: {},
+  templateUrl: ErrorPageTemplate,
+  controller: ErrorPageController,
 };
