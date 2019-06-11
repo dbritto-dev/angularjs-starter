@@ -7,5 +7,4 @@ window.__INITIAL_STATE__ = window.__INITIAL_STATE__ || {};
 export const AppModule = angular
   .module('app', [AppRoutingModule])
   .constant('__INITIAL_STATE__', window.__INITIAL_STATE__)
-  .component('app', AppComponent)
-  .name;
+  .component('app', AppComponent).name;
