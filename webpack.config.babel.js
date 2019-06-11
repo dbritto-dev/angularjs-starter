@@ -13,6 +13,9 @@ module.exports = (_, { mode = 'development' }) => ({
     port: 4000,
     historyApiFallback: true,
     disableHostCheck: true,
+    headers: {
+      'Cache-Control': 'public,max-age=31536000',
+    },
   },
 
   plugins: [
