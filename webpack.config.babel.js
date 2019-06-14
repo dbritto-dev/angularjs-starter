@@ -8,7 +8,7 @@ module.exports = (_, { mode = 'development' }) => ({
   },
 
   devServer: {
-    contentBase: './dist',
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 4000,
     historyApiFallback: true,
@@ -19,7 +19,11 @@ module.exports = (_, { mode = 'development' }) => ({
   },
 
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    // development
+    ...(mode === 'development' ? [] : []),
+    // production
+    ...(mode === 'production' ? [new CleanWebpackPlugin()] : []),
+    // common
     new HtmlWebpackPlugin({
       title: 'Development',
       template: './src/index.pug',
