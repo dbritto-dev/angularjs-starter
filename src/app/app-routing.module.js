@@ -1,5 +1,5 @@
 import angular from 'angular';
-import _arrayMap from 'lodash-es/_arrayMap';
+import _arrayEach from 'lodash-es/_arrayEach';
 import ocLazyLoad from 'oclazyload';
 import uiRouter from '@uirouter/angularjs';
 
@@ -42,7 +42,7 @@ export const AppRoutingModule = angular
         },
       ];
 
-      _arrayMap(states, state => $stateProvider.state(state));
+      _arrayEach(states, state => $stateProvider.state(state));
 
       $urlServiceProvider.rules.when('', '/');
       $urlServiceProvider.rules.otherwise('/error/404');

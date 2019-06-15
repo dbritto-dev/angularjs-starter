@@ -8,11 +8,9 @@ module.exports = (_, { mode = 'development' }) => ({
   },
 
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 4000,
     historyApiFallback: true,
-    disableHostCheck: true,
     headers: {
       'Cache-Control': 'public,max-age=31536000',
     },
@@ -48,20 +46,13 @@ module.exports = (_, { mode = 'development' }) => ({
       },
       {
         test: /\.pug$/,
-        include: /(index)\.pug$/,
+        include: /index\.pug$/,
         use: 'pug-loader',
       },
       {
         test: /\.pug$/,
-        exclude: /(index|404)\.pug$/,
+        exclude: /index\.pug$/,
         use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[hash].html',
-            },
-          },
-          'extract-loader',
           'html-loader',
           'pug-html-loader',
         ],
@@ -71,7 +62,6 @@ module.exports = (_, { mode = 'development' }) => ({
 
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js', '.scss', '.pug'],
     alias: {
       '@app': path.resolve(__dirname, 'src/app'),
       '@components': path.resolve(__dirname, 'src/components'),

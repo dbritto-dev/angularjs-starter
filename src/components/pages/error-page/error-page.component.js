@@ -1,3 +1,4 @@
+import './error-page.component.css';
 import ErrorPageTemplate from './error-page.component.pug';
 
 class ErrorPageController {
@@ -19,6 +20,6 @@ class ErrorPageController {
 
 export const ErrorPageComponent = {
   bindings: {},
-  templateUrl: ErrorPageTemplate,
+  template: ErrorPageTemplate,
   controller: ErrorPageController,
 };

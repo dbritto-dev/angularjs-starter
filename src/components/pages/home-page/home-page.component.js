@@ -1,3 +1,4 @@
+import './home-page.component.css';
 import HomePageTemplate from './home-page.component.pug';
 
 class HomePageController {
@@ -7,11 +8,13 @@ class HomePageController {
     this.__INITIAL_STATE__ = __INITIAL_STATE__;
   }
 
-  $onInit() {}
+  $onInit() {
+    console.log(this.__INITIAL_STATE__);
+  }
 }
 
 export const HomePageComponent = {
   bindings: {},
-  templateUrl: HomePageTemplate,
+  template: HomePageTemplate,
   controller: HomePageController,
 };
