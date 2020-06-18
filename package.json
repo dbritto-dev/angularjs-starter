@@ -33,7 +33,7 @@
 	},
 	"dependencies": {
 		"@uirouter/angularjs": "^1.0.22",
-		"angular": "^1.7.9",
+		"angular": "^1.8.0",
 		"lodash-es": "^4.17.14",
 		"oclazyload": "^1.1.0"
   },
