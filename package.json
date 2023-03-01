@@ -34,7 +34,7 @@
 	"dependencies": {
 		"@uirouter/angularjs": "^1.0.22",
 		"angular": "^1.8.0",
-		"lodash-es": "^4.17.14",
+		"lodash-es": "^4.17.21",
 		"oclazyload": "^1.1.0"
   },
   "browserslist": {
